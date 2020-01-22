@@ -1,8 +1,8 @@
-# GEttign Started with APpium
+# Getting Started with Appium
 
 This is the description on how to set up your machine so you can start testing applications
 
-# Windows applications
+## Generic Appium Desktop Installation
 Goto the Appium website and goto the section getting started.
 
 <a href="http://appium.io/docs/en/about-appium/getting-started/?lang=en">http://appium.io/docs/en/about-appium/getting-started/?lang=en</a>
@@ -14,12 +14,25 @@ Select the download package for the windows platform:
 
 At the moment of this writing the latest version for windows is Appium-windows-1.15.1.exe
 
-After the installation start the Appium Desktop Application and specify the Ip Adress of the server you want to run, to be your localhost. So 127.0.0.1
+# Testing Windows Applications
+When you want to test windows applications, you need to install the Windows Driver for appium. This is called the WinAppDriver. You can find the latest version of the drivere here: <a href="https://github.com/Microsoft/WinAppDriver/releases">https://github.com/Microsoft/WinAppDriver/releases</a>
 
-Starting appium might take a while. So don't be impatient when you click the icon and don't see an UI immediately.
+after installing the driver you can now start Appium Desktop.
+When you start the application it will start with the following screen:
+<img src="images/startupserveronlocalhost.PNG">
+
+Specify you want to run the appium server on your localhost. So you specify the Host Ip adress to be: 127.0.0.1
+
+Now you start the server.
+
+You will see the following screen, that indicates Appium is ready to accept requests from any client that wants to run a UI Test.
+
+<img src="images/appiumready.PNG">
 
 ## Validate your installation
-You can run the inspector that is part of the Appium Desktop client to start e.g. the windows forms application and then inspect it in the tool. This validates you have the windows Driver installed and that it can start your application.
+You can run the inspector that is part of the Appium Desktop client to start e.g. the windows forms application and then inspect it in the tool. This validates you have the Windows Driver installed and that it can start your application.
+
+click on the Inspection Glass Icon and then fill out the following properties. (This is case sensitive!)
 
 
 

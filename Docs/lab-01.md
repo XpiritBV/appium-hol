@@ -169,3 +169,7 @@ The solution to this should look something as follows:
     driver.Dispose();
 }
 ```
+## Whats next? More maintainable test code
+The previous code shows how you can test the UI, but the way we coded these examples are hard to maintain.
+Please continue with the next Lab exercise where we experiment with the PageObject pattern and see how we can write maintainable test automation code.
+<a href="lab-02.md">Lab 02</a>

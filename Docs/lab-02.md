@@ -288,3 +288,4 @@ It is easy to read that:
 
 This test is maintainable, because when a change is made to e.g. the AddNewItem Dialog, then I only need to make a change in the way I interact with the dialog in that specific class. All my tests always keep compiling and if implemented correct in the PageObject representing the dialog, the test will also keep running.
 
+If you want to see the results of this refactoring you can also switch to the Branch `MaintainableCode` in this repo. You will find the full implementation.

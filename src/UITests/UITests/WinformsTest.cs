@@ -5,6 +5,7 @@ using OpenQA.Selenium.Appium.Windows;
 using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
+using UITests.PageObjects;
 
 namespace UITests
 {
@@ -121,16 +122,43 @@ namespace UITests
             driver.Dispose();
         }
 
-
-        private void ScrollToEnd(WindowsDriver<WindowsElement> driver, AppiumWebElement element)
+        [TestMethod]
+        public void More_Maintainable_Version_Add_Item_Dialog_AddsNewItem()
         {
-            var input = new PointerInputDevice(PointerKind.Mouse);
-            ActionSequence scrollToEnd = new ActionSequence(input);
-            scrollToEnd.AddAction(input.CreatePointerMove(element, 0, 0, TimeSpan.Zero));
-            scrollToEnd.AddAction(input.CreatePointerDown(MouseButton.Middle));
-            scrollToEnd.AddAction(input.CreatePointerMove(element, 0, 600, TimeSpan.FromMilliseconds(200)));
-            scrollToEnd.AddAction(input.CreatePointerUp(MouseButton.Middle));
-            driver.PerformActions(new List<ActionSequence>() { scrollToEnd });
+            //arrange
+            var mainForm = CarvedRockApplication.StartApplication();
+
+            //act
+            var modifiedForm = mainForm.OpenNewItemDialog()
+                .AddNewItem("NewItem", "NewItemDetail")
+                .SelectItemInList("NewItem")
+                .CloseDetailDialog()
+                ;
+
+            //assert
+            Assert.IsTrue(modifiedForm.IsItemInListview("NewItem")) ;
+            CarvedRockApplication.CloseApplication();
         }
+
+        [TestMethod]
+        public void More_Maintainable_Version_Multiple_Add_Item_Dialog_AddsNewItem()
+        {
+            //arrange
+            var mainForm = CarvedRockApplication.StartApplication();
+            var numIterations = 5;
+            //act
+
+            MainForm modifiedForm=null;
+            while (numIterations-- > 0)
+            {
+                 modifiedForm = mainForm.OpenNewItemDialog()
+                    .AddNewItem("NewItem" + numIterations, "NewItemDetail" + numIterations);
+            }
+
+            //assert
+            Assert.IsTrue(modifiedForm.IsItemInListview("NewItem4"));
+            CarvedRockApplication.CloseApplication();
+        }
+        
     }
 }

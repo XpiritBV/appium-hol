@@ -42,7 +42,7 @@ Click on the _Inspection Glass Icon_ and then fill out the following properties.
 
 ```
 app = C:\labs\appium-hol\AppsToTest\WinForms\CarvedRock.exe
-DeviceName = WindowsPC
+deviceName = WindowsPC
 platformName = Windows
 ```
 

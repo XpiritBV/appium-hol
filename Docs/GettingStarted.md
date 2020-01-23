@@ -5,60 +5,63 @@ This is the description on how to set up your machine so you can start testing a
 ## Generic Appium Desktop Installation
 Goto the Appium website and goto the section getting started.
 
-<a href="http://appium.io/docs/en/about-appium/getting-started/?lang=en">http://appium.io/docs/en/about-appium/getting-started/?lang=en</a>
+http://appium.io/docs/en/about-appium/getting-started/?lang=en
 
 Follow the steps on installing the `Desktop App`
 
-Select the download package for the windows platform:
-<a href="https://github.com/appium/appium-desktop/releases">Appium Desktop App Releases</a>
+Select the download package for the Windows platform:
+[Appium Desktop App Releases](https://github.com/appium/appium-desktop/releases).
 
-At the moment of this writing, the latest version for windows is Appium-windows-1.15.1.exe
+At the moment of this writing, the latest version for windows is `Appium-windows-1.15.1.exe`
 
 # Testing Windows Applications
-When you want to test windows applications, you need to install the Windows Driver for appium. This is called the WinAppDriver. You can find the latest version of the driver here: <a href="https://github.com/Microsoft/WinAppDriver/releases">https://github.com/Microsoft/WinAppDriver/releases</a>
+
+When you want to test Windows applications, you need to install the _Windows Driver for Appium_. This is called the `WinAppDriver`. You can find the latest version of the driver here: https://github.com/Microsoft/WinAppDriver/releases
 
 Here you find the installer you need to run called: `WindowsApplicationDriver.msi`
 
-After installing the driver, you can now start Appium Desktop.
+After installing the driver, you can now start _Appium Desktop_.
+
 When you start the application it will start with the following screen:
 
-<img src="images/startupserveronlocalhost.PNG">
+![](images/startupserveronlocalhost.PNG)
 
-Specify you want to run the appium server on your localhost. So you specify the Host Ip address to be: 127.0.0.1
+Specify that you want to run the Appium server on your `localhost`. So you specify the `Host Ip` address to be: `127.0.0.1`
 
 Now you start the server.
 
-You will see the following screen, which indicates Appium is ready to accept requests from any client that wants to run a UI Test.
+You will see the following screen, which indicates that Appium is ready to accept requests from any client that wants to run a UI Test.
 
-<img src="images/appiumready.PNG">
+![](images/appiumready.PNG)
 
 ## Validate your installation
-You can run the inspector that is part of the Appium Desktop client to start, e.g. the windows forms application and then inspect it in the tool. This validates you have the Windows Driver installed and that it can start your application.
 
-Click on the Inspection Glass Icon and then fill out the following properties. (This is case sensitive!)
+You can run the inspector that is part of the _Appium Desktop_ client to start, e.g. the Windows Forms application, and then inspect it in the tool. This validates that you have the _Windows Driver_ installed and that it can start your application.
 
-> app = C:\labs\appium-hol\AppsToTest\WinForms\CarvedRock.exe <br>DeviceName = WindowsPC<br>
+Click on the _Inspection Glass Icon_ and then fill out the following properties. **This is case sensitive!**
+
+```
+app = C:\labs\appium-hol\AppsToTest\WinForms\CarvedRock.exe
+DeviceName = WindowsPC
 platformName = Windows
+```
 
-<img src="images/desiredcapabillities.PNG">
+![](images/desiredcapabillities.PNG)
 
 The moment you start you might experience some issues if you are missing some pre-requisites
 
-* Windows is not in Developer mode
-In this case, you need to go to the windows settings, or type in the windows taskbar search "developer mode" and then select the Developer mode option
+* Windows is not in _Developer Mode_. In this case, you need to go to the _Windows Settings_, or type `developer mode` in the Windows taskbar search, and then select the _Developer Mode_ option.
 
-* Dotnet framework 4.8 is not installed
-Click on the error dialog and install the .NET framework 4.8 runtime package on your machine so that you can run the windows forms application.
+* _.NET Framework 4.8_ is not installed. Click on the error dialog and install the _.NET Framework 4.8  Runtime_ package on your machine so that you can run the Windows Forms application.
 
-If all works as expected, then you should see the windows app started, and you should be able to see the app in the inspector, where you can see how to search for specific elements in the UI.
+If all works as expected, then you should see the Windows app started, and you should be able to see the app in the inspector, where you can see how to search for specific elements in the UI.
 
-<img src="images/winformsappundertest.PNG">
+![](images/winformsappundertest.PNG)
 
-You are now ready to start with Lab 01, where you will write your first UI tests for WinForms.
+You are now ready to start with [Lab 01](lab-01.md), where you will write your first UI tests for WinForms.
 
 # Android applications
 TODO: Android
 
-# iOS Applications
+# iOS applications
 TODO: iOS
-

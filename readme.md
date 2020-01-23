@@ -13,6 +13,6 @@ The prerequisites for taking the HOL are:
 Detailed instructions can be found here:
 
 * Lab 00: <a href="docs/GettingStarted.md">Getting Started </a>
-* Lab 01: Testing a windows forms application <a href="docs/lab-01.md">Lab01 </a>
-* Lab 02: Writing maintainable test automation <a href="docs/lab-02.md">Lab02 </a>
+* Lab 01: Hands-on Lab Testing Windows GUI Applications with Appium <a href="docs/lab-01.md">Lab01 </a>
+* Lab 02: Writing Maintainable Test Automation <a href="docs/lab-02.md">Lab02 </a>
 
